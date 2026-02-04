@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: #f4f6f8;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    background: #4ecdc4; 
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #fff;
+}
+
+
+.hero-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    padding: 20px;
+}
+
+.login-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-container .company-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+
+.login-container input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    background: #fafafa;
+    transition: 0.3s;
+}
+
+.login-container input::placeholder {
+    color: #999;
+}
+
+.login-container input:focus {
+    outline: none;
+    border-color: #4ecdc4;
+    background: #fff;
+}
+
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #4ecdc4;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background: #3bb6ad;
+}
+
+
+.login-container .links {
+    margin-top: 15px;
+}
+
+.login-container .links a {
+    font-size: 14px;
+    color: #4ecdc4;
+    text-decoration: none;
+}
+
+.login-container .links a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #ffffff;
+    padding: 12px;
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 25px;
+    }
+
+    .login-container {
+        padding: 30px 20px;
+    }
+}

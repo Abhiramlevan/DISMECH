@@ -1,0 +1,152 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #48CFCB;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1, .logo {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero-section {
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.content-section {
+    padding: 25px 20px;
+    min-height: calc(100vh - 80px);
+}
+
+.content-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #2c3e50;
+}
+
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.dashboard-card {
+    background-color: #ffffff;
+    color: #2c3e50;
+    border-radius: 12px;
+    padding: 16px 18px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.dashboard-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #48CFCB;
+}
+
+.dashboard-card p,
+.dashboard-card li {
+    font-size: 14px;
+    color: #444;
+}
+
+
+.full-box {
+    background-color: #48CFCB;
+    color: #ffffff;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+
+.button-container {
+    margin-bottom: 20px;
+}
+
+.button-container button {
+    background-color: #48CFCB;
+    color: #ffffff;
+    padding: 10px 22px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-container button:hover {
+    background-color: #229799;
+    transform: translateY(-2px);
+}
+
+
+.progress-bar {
+    width: 100%;
+    background: #e6e9ec;
+    height: 6px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.progress-bar div {
+    height: 100%;
+    background-color: #48CFCB;
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+
+.full-card {
+    grid-column: 1 / -1;
+}
+
+
+@media (max-width: 600px) {
+    .box-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DISMECH Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="final.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">DISMECH</div>
+</header>
+
+<main class="hero-section">
+<div class="container">
+<section class="content-section">
+
+<h2>AREA : Kuttanad Taluk</h2>
+
+
+<div class="box-container">
+    <div class="dashboard-card small-card">
+        <h3>Alert Status:</h3>
+        <p> <span id="ALERT">--</span></p>
+       <p>THRESHOLD:</p>
+        <p>GREEN ALERT>35CM</p>
+    <p>YELLOW ALERT<35CM</p>
+    <p>ORANGE ALERT<25CM</p>
+    <p>RED ALERT<10</p>
+       
+      
+    </div>
+
+    <div class="dashboard-card small-card">
+        <h3>Rain Intensity (mm):</h3>
+        <p><span id="rain">--</span></p>
+        <canvas id="rainChart"></canvas>
+    </div>
+
+    <div class="dashboard-card small-card">
+        <h3>River Water Level (cm):</h3>
+        <p><span id="ultra">--</span></p>
+        <canvas id="waterChart"></canvas>
+    </div>
+</div>
+
+<div class="box-container">
+    <div class="dashboard-card small-card">
+        <h3>Total Population:</h3>
+        <p>300</p>
+    </div>
+
+    <div class="dashboard-card small-card">
+        <h3>Evacuated:</h3>
+         <p><span id="MOVEDP">--</span></p>
+    </div>
+
+    <div class="dashboard-card small-card">
+        <h3>Missing:</h3>
+        <p><span id="MISSINGP">--</span></p>
+    </div>
+
+    <div class="dashboard-card small-card">
+        <h3>Server Status:</h3>
+        <p class="alert-ok">Connected</p>
+    </div>
+
+    <div class="dashboard-card small-card">
+        <h3>Rescue Teams Active:</h3>
+        <p>6</p>
+    </div>
+</div>
+
+
+<div class="box-container">
+    <div class="dashboard-card full-card">
+        <h3>Messages</h3>
+       <p>Messages from Devices: <span id="DMESSAGE">NO MESSAGES</span></p>
+       <p>Messages from Rescue Team: <span id="RMESSAGE">NO MESSAGES</span></p>
+    </div>
+</div>
+
+<h2>RESCUE CAMPS</h2>
+<div class="box-container">
+    <div class="dashboard-card camp-card">
+        <h3>Camp-1</h3>
+        <p>Occupancy :<span id="PINCAMP">--</span></p>
+    </div>
+
+    <div class="dashboard-card camp-card">
+        <h3>Camp-2</h3>
+        <p>Occupancy: 60 / 120</p>
+    </div>
+
+    <div class="dashboard-card camp-card">
+        <h3>Camp-3</h3>
+        <p>Occupancy: 30 / 80</p>
+    </div>
+</div>
+
+<h2>ADDITIONAL INFO</h2>
+<div class="box-container">
+    <div class="dashboard-card small-card">
+        <h3>Frequency Range</h3>
+        <p>2.400-2.525GHz</p>
+    </div>
+
+    <div class="dashboard-card small-card">
+        <h3>Sensors Active</h3>
+        <p>12 / 15</p>
+    </div>
+
+    <div class="dashboard-card small-card">
+        <h3>Current Risk Level</h3>
+        <p id="riskLevel" class="alert-warning">WARNING</p>
+    </div>
+
+    <div class="dashboard-card small-card">
+        <h3>Emergency Contacts</h3>
+        <ul>
+            <li>Police: 100</li>
+            <li>Fire: 101</li>
+            <li>Ambulance: 108</li>
+            <li>Disaster Control: 1077</li>
+        </ul>
+    </div>
+
+    <div class="dashboard-card small-card">
+        <h3>Download Report</h3>
+        <button id="downloadReport">Download</button>
+    </div>
+</div>
+
+
+<h2>DEVICE SEARCH</h2>
+
+<div class="box-container">
+    <div class="dashboard-card small-card">
+        <form id="accessForm">
+            <label for="accessCode">Enter Device Code:</label>
+            <input type="number" id="accessCode" placeholder="Device Code" required />
+            <button type="submit">Submit</button>
+        </form>
+        <p id="errorMessage"></p>
+    </div>
+</div>
+
+
+</section>
+</div>
+</main>
+
+<footer>
+    © 2026 ELECTROMECH PROJECTS
+</footer>
+
+  <script type="module" src="firebase-script.js"></script>
+</body>
+</html>

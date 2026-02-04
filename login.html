@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISMECH | Login</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="login.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">DISMECH</div>
+    </header>
+
+    <div class="hero-section">
+        <div class="login-container">
+            <h2 class="company-name">DISMECH</h2>
+            <form id="loginForm" action="list.html" method="get" name="myForm" onsubmit="return validateForm()">
+                <input id="name" name="name" type="text" placeholder="Username or Email" required>
+                <input id="password" name="password" type="password" placeholder="Password" required>
+                <button id="button" type="submit">Login</button>
+                <div class="links">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ELECTROMECH PROJECTS</p>
+    </footer>
+
+</body>
+</html>
